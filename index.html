@@ -1,209 +1,178 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Pacrel Kenya - Fast & Reliable Delivery</title>
-    <link rel="stylesheet" href="styles.css" />
-  </head>
-  <body>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Parcel Kenya - Fast & Reliable Delivery</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
     <header>
-      <div class="container">
-        <h1>📦 Parcel Kenya</h1>
-        <nav>
-          <button id="menu-toggle">☰ Menu</button>
-          <ul id="nav-menu">
-            <li><a href="#services">Services</a></li>
-            <li><a href="#pricing">Pricing</a></li>
-            <li><a href="#track">Track</a></li>
-            <li><a href="#contact">Contact</a></li>
-          </ul>
-        </nav>
-        <button id="theme-toggle">🌙 Dark mode</button>
-      </div>
+        <div class="container">
+            <h1>📦 Parcel Kenya</h1>
+            <nav>
+                <button id="menu-toggle">☰ Menu</button>
+                <ul id="nav-menu">
+                    <li><a href="#services">Services</a></li>
+                    <li><a href="#pricing">Pricing</a></li>
+                    <li><a href="#track">Track</a></li>
+                    <li><a href="#contact">Contact</a></li>
+                </ul>
+            </nav>
+            <button id="theme-toggle">🌙 Dark Mode</button>
+        </div>
     </header>
 
     <main class="container">
-      <!-- Hero Section -->
-      <section class="hero">
-        <h2>Fast & Reliable Delivery Across Kenya</h2>
-        <p>
-          From Nairobi to Mombasa, we deliver your parcels with care and speed
-        </p>
-        <button id="quote-btn">Get Instant Quote</button>
-        <div id="quote-modal" class="modal">
-          <div class="modal-content">
-            <span class="close">&times;</span>
-            <h3>Get a Delivery Quote</h3>
-            <form id="quote-form">
-              <div class="form-group">
-                <label for="from">From:</label>
-                <select id="from" required>
-                  <option value="">Select location</option>
-                  <option value="nairobi">Nairobi</option>
-                  <option value="mombasa">Mombasa</option>
-                  <option value="kisumu">Kisumu</option>
-                  <option value="nakuru">Nakuru</option>
-                </select>
-              </div>
-              <div class="form-group">
-                <label for="to">To:</label>
-                <select id="to" required>
-                  <option value="">Select location</option>
-                  <option value="nairobi">Nairobi</option>
-                  <option value="mombasa">Mombasa</option>
-                  <option value="kisumu">Kisumu</option>
-                  <option value="nakuru">Nakuru</option>
-                </select>
-              </div>
-              <div class="form-group">
-                <label for="weight">Weight (kg):</label>
-                <input
-                  type="number"
-                  id="weight"
-                  min="0.1"
-                  step="0.1"
-                  required
-                />
-              </div>
-              <button type="submit">Calculate</button>
-              <div id="quote-result"></div>
+        <!-- Hero Section -->
+        <section class="hero">
+            <h2>Fast & Reliable Delivery Across Kenya</h2>
+            <p>From Nairobi to Mombasa, we deliver your parcels with care and speed</p>
+            <button id="quote-btn">Get Instant Quote</button>
+            <div id="quote-modal" class="modal">
+                <div class="modal-content">
+                    <span class="close">&times;</span>
+                    <h3>Get a Delivery Quote</h3>
+                    <form id="quote-form">
+                        <div class="form-group">
+                            <label for="from">From:</label>
+                            <select id="from" required>
+                                <option value="">Select location</option>
+                                <option value="nairobi">Nairobi</option>
+                                <option value="mombasa">Mombasa</option>
+                                <option value="kisumu">Kisumu</option>
+                                <option value="nakuru">Nakuru</option>
+                            </select>
+                        </div>
+                        <div class="form-group">
+                            <label for="to">To:</label>
+                            <select id="to" required>
+                                <option value="">Select location</option>
+                                <option value="nairobi">Nairobi</option>
+                                <option value="mombasa">Mombasa</option>
+                                <option value="kisumu">Kisumu</option>
+                                <option value="nakuru">Nakuru</option>
+                            </select>
+                        </div>
+                        <div class="form-group">
+                            <label for="weight">Weight (kg):</label>
+                            <input type="number" id="weight" min="0.1" step="0.1" required>
+                        </div>
+                        <button type="submit">Calculate</button>
+                        <div id="quote-result"></div>
+                    </form>
+                </div>
+            </div>
+        </section>
+
+        <!-- Services Section with Interactive Tabs -->
+        <section id="services" class="services">
+            <h2>Our Services</h2>
+            <div class="tabs">
+                <button class="tab-btn active" data-tab="standard">Standard Delivery</button>
+                <button class="tab-btn" data-tab="express">Express Delivery</button>
+                <button class="tab-btn" data-tab="bulk">Bulk Delivery</button>
+            </div>
+            <div class="tab-content active" id="standard">
+                <h3>Standard Delivery</h3>
+                <p>2-3 business days delivery across major towns in Kenya. Perfect for non-urgent parcels.</p>
+                <ul>
+                    <li>Affordable rates</li>
+                    <li>Package tracking</li>
+                    <li>Email notifications</li>
+                </ul>
+            </div>
+            <div class="tab-content" id="express">
+                <h3>Express Delivery</h3>
+                <p>Same-day or next-day delivery for urgent packages within Nairobi and Mombasa.</p>
+                <ul>
+                    <li>Priority handling</li>
+                    <li>Guaranteed delivery time</li>
+                    <li>Real-time tracking</li>
+                </ul>
+            </div>
+            <div class="tab-content" id="bulk">
+                <h3>Bulk Delivery</h3>
+                <p>Specialized service for businesses with regular large volume deliveries.</p>
+                <ul>
+                    <li>Customized solutions</li>
+                    <li>Dedicated account manager</li>
+                    <li>Volume discounts</li>
+                </ul>
+            </div>
+        </section>
+
+        <!-- Tracking Section -->
+        <section id="track" class="tracking">
+            <h2>Track Your Parcel</h2>
+            <div class="track-form">
+                <input type="text" id="tracking-number" placeholder="Enter tracking number">
+                <button id="track-btn">Track</button>
+            </div>
+            <div id="tracking-result" class="tracking-result">
+                <!-- Results will be displayed here -->
+            </div>
+        </section>
+
+        <!-- Contact Form with Validation -->
+        <section id="contact" class="contact">
+            <h2>Contact Us</h2>
+            <form id="contact-form">
+                <div class="form-group">
+                    <label for="contact-name">Full Name:</label>
+                    <input type="text" id="contact-name" required>
+                    <span class="error" id="name-error"></span>
+                </div>
+                <div class="form-group">
+                    <label for="contact-email">Email:</label>
+                    <input type="email" id="contact-email" required>
+                    <span class="error" id="email-error"></span>
+                </div>
+                <div class="form-group">
+                    <label for="contact-phone">Phone Number:</label>
+                    <input type="tel" id="contact-phone" pattern="[0-9]{10}" required>
+                    <span class="error" id="phone-error"></span>
+                </div>
+                <div class="form-group">
+                    <label for="contact-message">Message:</label>
+                    <textarea id="contact-message" rows="4" required></textarea>
+                    <span class="error" id="message-error"></span>
+                </div>
+                <button type="submit">Send Message</button>
+                <div id="form-success" class="success"></div>
             </form>
-          </div>
-        </div>
-      </section>
+        </section>
 
-      <!-- Services Section with Interactive tabs -->
-      <section id="services" class="services">
-        <h2>Our Services</h2>
-        <div class="tabs">
-          <button class="tab-btn active" data-tab="standard">
-            Standard Delivery
-          </button>
-          <button class="tab-btn" data-tab="express">Express Delivery</button>
-          <button class="tab-btn" data-tab="bulk">Bulk Delivery</button>
-        </div>
-        <div class="tab-content active" id="standard">
-          <h3>Standard Delivery</h3>
-          <p>
-            1-2 business days delivery across major towns in Kenya. Perfect for
-            non-urgent parcels.
-          </p>
-          <ul>
-            <li>Affordable Rates</li>
-            <li>Reliable Tracking</li>
-            <li>Email Notifications</li>
-          </ul>
-        </div>
-        <div class="tab-content" id="express">
-          <h3>Express Delivery</h3>
-          <p>Fast and reliable delivery within 24 hours.</p>
-          <ul>
-            <li>Priority Handling</li>
-            <li>Guaranteed Delivery Time</li>
-            <li>Real-time Tracking</li>
-          </ul>
-        </div>
-        <div class="tab-content" id="bulk">
-          <h3>Bulk Delivery</h3>
-          <p>
-            Specialized service for businesses with regular large volume
-            deliveries.
-          </p>
-          <ul>
-            <li>Volume Discounts</li>
-            <li>Dedicated Account Management</li>
-            <li>Flexible Scheduling</li>
-          </ul>
-        </div>
-      </section>
-
-      <!-- Tracking Section -->
-      <section id="track" class="tracking">
-        <h2>Track Your Parcel</h2>
-        <div class="track-form">
-          <input
-            type="text"
-            id="tracking-number"
-            placeholder="Enter tracking number"
-          />
-          <button id="track-btn">Track</button>
-        </div>
-        <div id="tracking-result" class="tracking-result">
-          <!-- Results will be displayed here -->
-        </div>
-      </section>
-      <!-- Contact Form with Validation -->
-      <section id="contact" class="contact">
-        <h2>Contact Us</h2>
-        <form id="contact-form">
-          <div class="form-group">
-            <label for="contact-name">Full Name:</label>
-            <input type="text" id="contact-name" required />
-            <span class="error" id="name-error"></span>
-          </div>
-          <div class="form-group">
-            <label for="contact-email">Email:</label>
-            <input type="email" id="contact-email" required />
-            <span class="error" id="email-error"></span>
-          </div>
-          <div class="form-group">
-            <label for="contact-phone">Phone Number:</label>
-            <input type="tel" id="contact-phone" pattern="[0-9]{10}" required />
-            <span class="error" id="phone-error"></span>
-          </div>
-          <div class="form-group">
-            <label for="contact-message">Message:</label>
-            <textarea id="contact-message" rows="4" required></textarea>
-            <span class="error" id="message-error"></span>
-          </div>
-          <button type="submit">Send Message</button>
-          <div id="form-success" class="success"></div>
-        </form>
-      </section>
-
-      <!-- FAQ Section -->
-      <section class="faq">
-        <h2>Frequently Asked Questions</h2>
-        <div class="faq-item">
-          <button class="faq-question">
-            What areas do you cover in Kenya?
-          </button>
-          <div class="faq-answer">
-            <p>
-              We cover all major towns including Nairobi, Mombasa, Kisumu,
-              Nakuru, Eldoret, and Thika. We're expanding to more locations
-              every month!
-            </p>
-          </div>
-        </div>
-        <div class="faq-item">
-          <button class="faq-question">How do I pay for delivery?</button>
-          <div class="faq-answer">
-            <p>
-              We accept M-Pesa, credit/debit cards, and bank transfers. Payment
-              is required before we dispatch your parcel.
-            </p>
-          </div>
-        </div>
-        <div class="faq-item">
-          <button class="faq-question">What items can't I send?</button>
-          <div class="faq-answer">
-            <p>
-              We don't transport perishable goods, illegal items, firearms, or
-              hazardous materials. Please contact us if you're unsure about your
-              item.
-            </p>
-          </div>
-        </div>
-      </section>
+        <!-- FAQ Section -->
+        <section class="faq">
+            <h2>Frequently Asked Questions</h2>
+            <div class="faq-item">
+                <button class="faq-question">What areas do you cover in Kenya?</button>
+                <div class="faq-answer">
+                    <p>We cover all major towns including Nairobi, Mombasa, Kisumu, Nakuru, Eldoret, and Thika. We're expanding to more locations every month!</p>
+                </div>
+            </div>
+            <div class="faq-item">
+                <button class="faq-question">How do I pay for delivery?</button>
+                <div class="faq-answer">
+                    <p>We accept M-Pesa, credit/debit cards, and bank transfers. Payment is required before we dispatch your parcel.</p>
+                </div>
+            </div>
+            <div class="faq-item">
+                <button class="faq-question">What items can't I send?</button>
+                <div class="faq-answer">
+                    <p>We don't transport perishable goods, illegal items, firearms, or hazardous materials. Please contact us if you're unsure about your item.</p>
+                </div>
+            </div>
+        </section>
     </main>
+
     <footer>
-      <div class="container">
-        <p>&copy; 2025 Parcel Kenya. All rights reserved.</p>
-      </div>
+        <div class="container">
+            <p>&copy; 2025 Parcel Kenya. All rights reserved.</p>
+        </div>
     </footer>
 
-    <script src="./script.js"></script>
-  </body>
+    <script src="script.js"></script>
+</body>
 </html>
