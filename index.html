@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Pacrel Kenya - Fast & Reliable Delivery</title>
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <header>
+      <div class="container">
+        <h1>📦 Parcel Kenya</h1>
+        <nav>
+          <button id="menu-toggle">☰ Menu</button>
+          <ul id="nav-menu">
+            <li><a href="#services">Services</a></li>
+            <li><a href="#pricing">Pricing</a></li>
+            <li><a href="#track">Track</a></li>
+            <li><a href="#contact">Contact</a></li>
+          </ul>
+        </nav>
+        <button id="theme-toggle">🌙 Dark mode</button>
+      </div>
+    </header>
+
+    <main class="container">
+      <!-- Hero Section -->
+      <section class="hero">
+        <h2>Fast & Reliable Delivery Across Kenya</h2>
+        <p>
+          From Nairobi to Mombasa, we deliver your parcels with care and speed
+        </p>
+        <button id="quote-btn">Get Instant Quote</button>
+        <div id="quote-modal" class="modal">
+          <div class="modal-content">
+            <span class="close">&times;</span>
+            <h3>Get a Delivery Quote</h3>
+            <form id="quote-form">
+              <div class="form-group">
+                <label for="from">From:</label>
+                <select id="from" required>
+                  <option value="">Select location</option>
+                  <option value="nairobi">Nairobi</option>
+                  <option value="mombasa">Mombasa</option>
+                  <option value="kisumu">Kisumu</option>
+                  <option value="nakuru">Nakuru</option>
+                </select>
+              </div>
+              <div class="form-group">
+                <label for="to">To:</label>
+                <select id="to" required>
+                  <option value="">Select location</option>
+                  <option value="nairobi">Nairobi</option>
+                  <option value="mombasa">Mombasa</option>
+                  <option value="kisumu">Kisumu</option>
+                  <option value="nakuru">Nakuru</option>
+                </select>
+              </div>
+              <div class="form-group">
+                <label for="weight">Weight (kg):</label>
+                <input
+                  type="number"
+                  id="weight"
+                  min="0.1"
+                  step="0.1"
+                  required
+                />
+              </div>
+              <button type="submit">Calculate</button>
+              <div id="quote-result"></div>
+            </form>
+          </div>
+        </div>
+      </section>
+
+
+    </main>
+  </body>
+</html>
