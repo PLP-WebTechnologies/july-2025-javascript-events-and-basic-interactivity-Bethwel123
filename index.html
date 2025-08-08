@@ -73,7 +73,137 @@
         </div>
       </section>
 
+      <!-- Services Section with Interactive tabs -->
+      <section id="services" class="services">
+        <h2>Our Services</h2>
+        <div class="tabs">
+          <button class="tab-btn active" data-tab="standard">
+            Standard Delivery
+          </button>
+          <button class="tab-btn" data-tab="express">Express Delivery</button>
+          <button class="tab-btn" data-tab="bulk">Bulk Delivery</button>
+        </div>
+        <div class="tab-content active" id="standard">
+          <h3>Standard Delivery</h3>
+          <p>
+            1-2 business days delivery across major towns in Kenya. Perfect for
+            non-urgent parcels.
+          </p>
+          <ul>
+            <li>Affordable Rates</li>
+            <li>Reliable Tracking</li>
+            <li>Email Notifications</li>
+          </ul>
+        </div>
+        <div class="tab-content" id="express">
+          <h3>Express Delivery</h3>
+          <p>Fast and reliable delivery within 24 hours.</p>
+          <ul>
+            <li>Priority Handling</li>
+            <li>Guaranteed Delivery Time</li>
+            <li>Real-time Tracking</li>
+          </ul>
+        </div>
+        <div class="tab-content" id="bulk">
+          <h3>Bulk Delivery</h3>
+          <p>
+            Specialized service for businesses with regular large volume
+            deliveries.
+          </p>
+          <ul>
+            <li>Volume Discounts</li>
+            <li>Dedicated Account Management</li>
+            <li>Flexible Scheduling</li>
+          </ul>
+        </div>
+      </section>
 
+      <!-- Tracking Section -->
+      <section id="track" class="tracking">
+        <h2>Track Your Parcel</h2>
+        <div class="track-form">
+          <input
+            type="text"
+            id="tracking-number"
+            placeholder="Enter tracking number"
+          />
+          <button id="track-btn">Track</button>
+        </div>
+        <div id="tracking-result" class="tracking-result">
+          <!-- Results will be displayed here -->
+        </div>
+      </section>
+      <!-- Contact Form with Validation -->
+      <section id="contact" class="contact">
+        <h2>Contact Us</h2>
+        <form id="contact-form">
+          <div class="form-group">
+            <label for="contact-name">Full Name:</label>
+            <input type="text" id="contact-name" required />
+            <span class="error" id="name-error"></span>
+          </div>
+          <div class="form-group">
+            <label for="contact-email">Email:</label>
+            <input type="email" id="contact-email" required />
+            <span class="error" id="email-error"></span>
+          </div>
+          <div class="form-group">
+            <label for="contact-phone">Phone Number:</label>
+            <input type="tel" id="contact-phone" pattern="[0-9]{10}" required />
+            <span class="error" id="phone-error"></span>
+          </div>
+          <div class="form-group">
+            <label for="contact-message">Message:</label>
+            <textarea id="contact-message" rows="4" required></textarea>
+            <span class="error" id="message-error"></span>
+          </div>
+          <button type="submit">Send Message</button>
+          <div id="form-success" class="success"></div>
+        </form>
+      </section>
+
+      <!-- FAQ Section -->
+      <section class="faq">
+        <h2>Frequently Asked Questions</h2>
+        <div class="faq-item">
+          <button class="faq-question">
+            What areas do you cover in Kenya?
+          </button>
+          <div class="faq-answer">
+            <p>
+              We cover all major towns including Nairobi, Mombasa, Kisumu,
+              Nakuru, Eldoret, and Thika. We're expanding to more locations
+              every month!
+            </p>
+          </div>
+        </div>
+        <div class="faq-item">
+          <button class="faq-question">How do I pay for delivery?</button>
+          <div class="faq-answer">
+            <p>
+              We accept M-Pesa, credit/debit cards, and bank transfers. Payment
+              is required before we dispatch your parcel.
+            </p>
+          </div>
+        </div>
+        <div class="faq-item">
+          <button class="faq-question">What items can't I send?</button>
+          <div class="faq-answer">
+            <p>
+              We don't transport perishable goods, illegal items, firearms, or
+              hazardous materials. Please contact us if you're unsure about your
+              item.
+            </p>
+          </div>
+        </div>
+      </section>
     </main>
+    <footer>
+      <div class="container">
+        <p>&copy; 2025 Parcel Kenya. All rights reserved.</p>
+      </div>
+    </footer>
+
+    <script src="./script.js"></script>
   </body>
 </html>
